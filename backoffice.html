@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Backoffice Torres luxury cars" />
+    <title>Backoffice</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/custom-bootstrap.css" />
+  </head>
+  <body>
+    <header>
+      <!-- nav -->
+      <nav
+        class="navbar bg-secondary-subtle fixed-top px-sm-5 justify-content-between flex-nowrap"
+      >
+        <div class="container-fluid">
+          <div class="d-flex">
+            <a class="navbar-brand" href="./homepage.html">
+              <img
+                src="./assets/img/golden-color-elegant-luxury-3d-automotive-logo_657998-5.avif"
+                alt="Logo"
+                width="70"
+                height="50"
+                class="d-inline-block align-text-top"
+              />
+            </a>
+            <h5 class="p-0 align-self-center">Torres Luxury Cars</h5>
+          </div>
+          <ul class="navbar-nav d-flex flex-row gap-2 align-self-center ps-3">
+            <li class="nav-item btn btn-outline-warning rounded-4">
+              <a class="nav-link" aria-current="page" href="./homepage.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Modale reset -->
+      <div
+        class="modal fade"
+        id="reset-modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-header">
+              <h2>Sei sicuro di voler resettare il form?</h2>
+            </div>
+            <div class="modal-body d-flex justify-content-center gap-5">
+              <button
+                class="btn btn-danger px-4"
+                data-bs-toggle="modal"
+                data-bs-target="#reset-modal"
+                id="yes-reset"
+              >
+                SI
+              </button>
+              <button
+                class="btn btn-success px-3"
+                data-bs-toggle="modal"
+                data-bs-target="#reset-modal"
+              >
+                NO
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modale delete -->
+      <div
+        class="modal fade"
+        id="delete-modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-header">
+              <h2>Sei sicuro di voler eliminare la vettura?</h2>
+            </div>
+            <div class="modal-body d-flex justify-content-center gap-5">
+              <button
+                class="btn btn-danger px-4"
+                data-bs-toggle="modal"
+                data-bs-target="#delete-modal"
+                id="yes-delete"
+              >
+                SI
+              </button>
+              <button
+                class="btn btn-success px-3"
+                data-bs-toggle="modal"
+                data-bs-target="#delete-modal"
+              >
+                NO
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- form -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col col-12 col-md-8 col-lg-6">
+            <form id="creation-form">
+              <div class="mb-3">
+                <label for="brand" class="form-label">Brand vettura</label>
+                <input type="text" class="form-control" id="brand" required />
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Modello vettura</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <!-- al posto della descrizione ho messo cavalli-->
+                <label for="description" class="form-label">Cavalli</label>
+                <input
+                  type="number"
+                  min="0"
+                  class="form-control"
+                  id="description"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="imageUrl" class="form-label"
+                  >URL valido immagine vettura</label
+                >
+                <input type="url" class="form-control" id="imageUrl" required />
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Prezzo</label>
+                <input
+                  type="number"
+                  min="0"
+                  class="form-control"
+                  id="price"
+                  required
+                />
+              </div>
+              <div>
+                <button
+                  id="reset"
+                  type="button"
+                  class="btn btn-warning"
+                  data-bs-toggle="modal"
+                  data-bs-target="#reset-modal"
+                >
+                  RESET
+                </button>
+              </div>
+              <div id="buttons" class="d-flex justify-content-center gap-2">
+                <button type="submit" class="mt-3 btn btn-success">
+                  SALVA VETTURA
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-secondary-subtle py-2 mt-5">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col col-12 text-center d-flex justify-content-center">
+            <ul class="list-unstyled mb-0 d-flex gap-3 mt-2">
+              <li>
+                <a
+                  class="text-decoration-none text-black"
+                  href="./homepage.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-black" href="#">Contatti</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-black" href="#"
+                  >Dove siamo</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col col-12 text-center d-flex justify-content-center align-items-center"
+          >
+            <p class="mb-0 mt-3">
+              ⓒ <span id="current-year"></span> Torres Luxury Cars - TUTTI I
+              CONTENUTI SONO RISERVATI
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/date.js"></script>
+    <script src="./script/backoffice.js"></script>
+  </body>
+</html>

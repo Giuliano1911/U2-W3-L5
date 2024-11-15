@@ -1,0 +1,27 @@
+@import './BootstrapSCSS/functions';
+@import './BootstrapSCSS/variables';
+
+$new-theme: (
+  'warning': #ff8000,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme);
+
+@import './BootstrapSCSS/bootstrap.scss';
+
+main {
+  margin-top: 100px !important;
+}
+
+.card,
+.card-title {
+  overflow: hidden;
+}
+
+.transition {
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
