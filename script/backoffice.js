@@ -1,5 +1,5 @@
 const apiKey =
-  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzM3MDBhMDhhZDEyOTAwMTU4NzZiYjEiLCJpYXQiOjE3MzE2NTc4ODgsImV4cCI6MTczMjg2NzQ4OH0.xQK6uAb_sB0o0F3MwMso74u56QBkTHd7Yggrfk3SM8Y'
+  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzlmZjdiNmYxZGM5MDAwMTVmMWViYTUiLCJpYXQiOjE3Mzg1MzY4ODYsImV4cCI6MTczOTc0NjQ4Nn0.d68fRp0z3X7EO6NPxdyqY_tFe1CE25lJf_5kmNrRRC0'
 const url = 'https://striveschool-api.herokuapp.com/api/product/'
 
 class Vettura {
